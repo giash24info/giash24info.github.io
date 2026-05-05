@@ -404,12 +404,6 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Header ----- */
 /* --------------------------------------- */
 
-.header {
-  position: relative;
-  min-height: 100dvh;
-  /* keep only gradient */
-/* background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.4)); */
-}
 
 .header__text {
     position: absolute;
@@ -443,9 +437,11 @@ body:not(.user-is-tabbing) a:focus {
   transform: scale(1.1);
   will-change: transform;
 }
+
 .header {
   position: relative;
-  overflow: hidden;
+  min-height: 100vh; /* fallback for mobile */
+  overflow: hidden;  /* prevents background overflow */
 }
 
 .header-bg {
@@ -456,6 +452,10 @@ body:not(.user-is-tabbing) a:focus {
   z-index: -1;
 }
 
+.header-bg {
+  height: 100%;
+  width: 100%;
+}
 
 /* --------------------------------------- */
 /* ----- Work ----- */
@@ -705,7 +705,7 @@ body:not(.user-is-tabbing) a:focus {
   display: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .nav {
     display: none;
   }
@@ -733,6 +733,14 @@ body:not(.user-is-tabbing) a:focus {
     color: #1dbf73;
   }
 }
+
+@media (max-width: 768px) {
+  .header-bg {
+    transform: scale(1); /* remove zoom */
+    background-position: center;
+  }
+}
+
 
 /* subtle glow */
 .nav::before {
