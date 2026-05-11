@@ -428,15 +428,6 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url('./images/header.jpg') center/cover no-repeat;
-  z-index: -1;
-  transform: scale(1.1);
-  will-change: transform;
-}
 
 .header {
     background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
@@ -448,18 +439,6 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-normal);
 }
 
-.header-bg {
-  position: absolute;
-  inset: 0;
-  background: url('./images/header.jpg') center/cover no-repeat;
-  transform: scale(1.1);
-  z-index: -1;
-}
-
-.header-bg {
-  height: 100%;
-  width: 100%;
-}
 
 /* --------------------------------------- */
 /* ----- Work ----- */
@@ -709,7 +688,7 @@ body:not(.user-is-tabbing) a:focus {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .nav {
     display: none;
   }
@@ -738,12 +717,6 @@ body:not(.user-is-tabbing) a:focus {
   }
 }
 
-@media (max-width: 768px) {
-  .header-bg {
-    transform: scale(1); /* remove zoom */
-    background-position: center;
-  }
-}
 
 
 /* subtle glow */
@@ -846,3 +819,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 
+
+					   
+			   
+ 
